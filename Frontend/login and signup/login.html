@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="login-container" id="loginForm">
+            <h2>Equity Bank</h2>
+            <form>
+                <div class="input-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="button" onclick="login()">Login</button>
+                <p class="error-message" id="login-error"></p>
+                <p class="options">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a> |
+                    <a href="#" onclick="showSignup()">Sign Up</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Signup Form (Hidden by Default) -->
+        <div class="login-container hidden" id="signupForm">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="input-group">
+                    <label for="signup-email">Email or Phone Number</label>
+                    <input type="text" id="signup-email" placeholder="Enter email or phone" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="signup-card">Bank Card Number</label>
+                    <input type="text" id="signup-card" placeholder="Enter your card number" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="button" onclick="signupUser()">Sign Up</button>
+                <p class="error-message" id="signup-error"></p>
+                <p class="options">
+                    Already have an account? <a href="#" onclick="showLogin()">Login</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Forgot Password Form (Hidden by Default) -->
+        <div class="login-container hidden" id="forgotPasswordForm">
+            <h2>Reset Your Password</h2>
+            <p>Enter your Phone Number or Email address and we will send you an OTP to reset your password.</p>
+            <form>
+                <div class="input-group">
+                    <label for="forgot-email">Email/ Phone Number</label>
+                    <input type="text" id="forgot-email" placeholder="Enter email or phone" required>
+                </div>
+
+                <button type="button" onclick="sendOTP()">Send OTP</button>
+                <p class="error-message" id="forgot-error"></p>
+                <p class="options">
+                    <a href="#" onclick="showLogin()">Back to Login</a>
+                </p>
+            </form>
+        </div>  
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
