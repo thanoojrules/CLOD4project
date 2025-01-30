@@ -17,15 +17,15 @@
 
 Here's the PostgreSQL code to create the `accounts` table based on your Node.js/Express application structure described earlier:
 
-### **Table Creation SQL**
-```sql
--- Create the database (if it doesn't exist)
+Table Creation SQL
+
+//Create the database (if it doesn't exist)
 CREATE DATABASE test;
 
--- Connect to the database
+//Connect to the database
 \c test;
 
--- Create the accounts table
+//Create the accounts table
 CREATE TABLE IF NOT EXISTS accounts (
     c_id SERIAL PRIMARY KEY,
     savings INTEGER NOT NULL,
